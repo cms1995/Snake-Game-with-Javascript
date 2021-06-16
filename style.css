@@ -1,0 +1,28 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+}
+
+#game-board{
+    background-color: #CCC;
+    width: 100vmin;/* usamos vmin para q el tablero sea un cuadrado, lo más largo posible para caber en toda nuestra pantalla */
+    height: 100vmin;
+    display: grid; /*  el juego va a tener 21 col y 21 filas del = tamaño. quereemos ademas q el navegador calcule automáticamente el tamaño q ocuparán sin importar el tamaño de la pantalla, de modo q siempre tengan el mismo tamaño esos 21 cuadrados */
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+}
+
+.snake{
+    background-color: hsl(200, 100%, 50%);
+    border: .25vmin solid black; /* el borde va a escalar con la pantalla */
+}
+
+.food{
+    background-color: hsl(50, 100%, 50%);
+    border: .25vmin solid black;
+}
